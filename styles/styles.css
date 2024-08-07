@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/*TRANSITION*/
+a,
+.btn {
+    transition: all 300ms ease;
+}
+
+/*NAVIGATION*/
+nav,
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    /* Reduced height for smaller screens */
+}
+
+.nav-links {
+    gap: 1rem;
+    /* Reduced gap for smaller screens */
+    list-style: none;
+    font-size: 1.2rem;
+    /* Reduced font size for smaller screens */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    cursor: pointer;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+    font-size: 1.5rem;
+    /* Reduced font size for smaller screens */
+    color: black;
+}
+
+/* Hambuger Menu */
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 9px;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    /* Reduced font size for smaller screens */
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* When the screen is lower than 1200px, the desktop navigation should disapear */
+@media screen and (max-width:1200px) {
+    #desktop-nav {
+        display: none
+    }
+
+    #hamburger-nav {
+        display: flex
+    }
+}
+
+.main-display {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #888181;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    /* Center the div horizontally on the page */
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    /* The div will not grow beyond 80% of the container's width */
+    min-width: 250px;
+    /* The div will not shrink below 300px */
+    width: 100%;
+    /* Allows the div to take up 100% of the available width within the max/min limits */
+}
+
+.main-display p {
+    padding: 20px;
+}
+
+.name-display {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.name-display span {
+    font-weight: 900;
+    animation: rainbow 10s infinite;
+    /* Adjust the duration as needed */
+}
+
+@keyframes rainbow {
+    0% {
+        color: #E40303;
+        /* Red */
+    }
+
+    17% {
+        color: #FF8C00;
+        /* Orange */
+    }
+
+    33% {
+        color: #FFED00;
+        /* Yellow */
+    }
+
+    50% {
+        color: #008026;
+        /* Green */
+    }
+
+    67% {
+        color: #24408E;
+        /* Indigo */
+    }
+
+    83% {
+        color: #732982;
+        /* Violet */
+    }
+
+    100% {
+        color: #E40303;
+        /* Red (looping back) */
+    }
+}
+
+.btn-container {
+    padding: 20px;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 20px;
+    background: #000;
+    color: #fff;
+}
+
+.project {
+    flex: 0 0 calc(50% - 20px);
+    /* Two columns with spacing */
+    margin: 10px;
+    /* Add spacing between projects */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px 50px 20px;
+}
+
+.project img {
+    width: auto;
+    max-height: 200px;
+    /* Fixed height for the images */
+    border-radius: 8px;
+    margin-top: auto;
+    /* Align images to the bottom of the container */
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    padding-bottom: 1rem;
+    margin: 0 1rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Style for the social media icons hover effect */
+.icon:hover {
+    transform: scale(1.2);
+    /* Increase the size of the icon on hover */
+}
+
+.center-btn {
+    display: block;
+    margin: 20px auto;
+    /* Adjust margin as needed */
+}
+
+#typing-effect {
+    font-family: 'Courier New', Courier, monospace;
+    /* Makes it look like a typewriter */
+    white-space: nowrap;
+    /* Keeps the text on a single line */
+    overflow: hidden;
+    /* Hides text outside the container */
+    border-right: 2px solid;
+    /* Blinking cursor effect */
+    animation: blink-caret 0.75s step-end infinite;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: black
+    }
+}
+
+.profile-picture{
+    padding: 30px;
+    border-radius: 50%;
+    height: 200px;
+    /* Reduced profile picture size for smaller screens */
+    width: 200px;
+}
