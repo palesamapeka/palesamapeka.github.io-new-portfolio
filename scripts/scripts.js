@@ -42,7 +42,7 @@ function createEducation(previousButton) {
         <div class="main-display">
             <h1>Education</h1>
             <div class="project">
-            <p>MICTSeta National Certificate: Information Technology: Systems Development  <br>BBD x <a>Umuzi.org</a> <br>2024</p>
+            <p>MICT Seta National Certificate: Information Technology: Systems Development  <br><a href="https://bbdsoftware.com/">BBD</a> x <a>Umuzi.org</a> <br>2024</p>
             </div>
 
             <div class="project">

@@ -40,4 +40,5 @@ const typingEffect = (elementId, textArray, typingSpeed = 100, deletingSpeed = 5
   // Usage
   const texts = ["I'm Palesa","Junior Web Developer", "Click the button to get to know me!", "Enjoy your stay!"];
   typingEffect('typing-effect', texts);
+
   
