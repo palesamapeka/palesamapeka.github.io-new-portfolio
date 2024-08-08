@@ -185,6 +185,18 @@ function createProjects(previousButton) {
                   href="https://github.com/palesamapeka/palesamapeka.github.io/tree/main/projects/simple-quiz-app">Project
                   Repo</a></p>
             </div>
+            <div class="project">
+              <p>South African ID Number Validator</p>
+              <a href="/projects/validate-south-african-id/index.html">
+                <img src="/assests/validate.jpg">
+              </a>
+              <p>Project Summary: <br>
+                This project is a simple ID validation tool built using HTML and JavaScript. It allows users to input a South African ID number, 
+                validate its authenticity, and extract specific details from it. The application provides feedback on whether the ID number is 
+                valid or invalid and displays additional information such as the person's gender, citizenship status, and date of birth.<br><a
+                  href="https://github.com/palesamapeka/palesamapeka.github.io/tree/main/projects/simple-quiz-app">Project
+                  Repo</a></p>
+            </div>
         </div>`;
 
   // Create the Projects section
